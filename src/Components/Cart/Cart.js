@@ -1,9 +1,8 @@
 import React, { useContext } from 'react';
-import CartContext from './cart-context';
+import CartContext from '../../store/cart-context';
 
 function Cart(props) {
     const cartContext = useContext(CartContext);
-
     const cartItems = cartContext.items.map((item) => (
         <li key={item.id}>
             {item.shoeName} - {item.price} Rs
