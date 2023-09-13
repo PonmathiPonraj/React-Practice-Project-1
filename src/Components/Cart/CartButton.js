@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import CartContext from '../../store/cart-context';
-import CartModal from '../Modal'; // Create CartModal component
+import CartModal from '../Modal';
+import classes from './CartButton.module.css';
 
 const CartButton = (props) => {
     const cartCtx = useContext(CartContext);
@@ -19,7 +20,7 @@ const CartButton = (props) => {
     };
 
     return (
-        <div>
+        <div className={classes.button}>
             <button onClick={showCartHandler} className={classes.button}>
                 Cart ({numberOfCartItems})
             </button>
